@@ -1,6 +1,6 @@
 import numpy as np
 # following a Youtube tutorial from Polycode
-
+# https://www.youtube.com/watch?v=kft1AJ9WVDk
 # this will be our normalizing function phi(x)
 def sigmoid(x):
     """ normalizing funciton that returns number between 0 and 1 """
