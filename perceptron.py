@@ -1,4 +1,5 @@
 import numpy as np
+# perceptron is a NN with no hidden layers
 # following a Youtube tutorial from Polycode
 # https://www.youtube.com/watch?v=kft1AJ9WVDk
 # this will be our normalizing function phi(x)
@@ -18,7 +19,7 @@ training_inputs = np.array(
     ]
 )
 
-training_outputs = np.array([[0,1,1,0]]).T
+training_outputs = np.array([[0,1,0,1]]).T
 # not really 100 sure why we need these yet
 np.random.seed(1)
 synaptic_weights = 2 * np.random.random((3,1)) - 1 
@@ -41,7 +42,7 @@ for itter in range(20000):
 
     synaptic_weights += adjust_weight_by
 
-print(f"synaptic weights after traingin\n {synaptic_weights}")
+print(f"synaptic weights after trainging\n {synaptic_weights}")
 
 # want the outputs to look like training output?
 print(f"output after training:\n{outputs}")
