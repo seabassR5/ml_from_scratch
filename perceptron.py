@@ -20,6 +20,20 @@ training_inputs = np.array(
 )
 
 training_outputs = np.array([[0,1,0,1]]).T
+# seems incapable of learning xor as mentioned in the perceptron wikipedia entry
+xor_inputs = np.array(
+    [
+        [0,0,1],
+        [1,1,1],
+        [1,0,1],
+        [0,1,1]
+    ]
+)
+
+xor_outputs = np.array([[0,0,1,1]]).T
+training_inputs = xor_inputs
+training_outputs = xor_outputs
+
 # not really 100 sure why we need these yet
 np.random.seed(1)
 synaptic_weights = 2 * np.random.random((3,1)) - 1 
