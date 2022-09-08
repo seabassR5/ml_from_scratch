@@ -26,11 +26,15 @@ xor_inputs = np.array(
         [0,0,1],
         [1,1,1],
         [1,0,1],
-        [0,1,1]
+        [0,1,1],
+        [0,0,0],
+        [1,1,0],
+        [1,0,0],
+        [0,1,0]
     ]
 )
 
-xor_outputs = np.array([[0,0,1,1]]).T
+xor_outputs = np.array([[0,0,1,1,0,0,1,1]]).T
 training_inputs = xor_inputs
 training_outputs = xor_outputs
 
@@ -39,7 +43,7 @@ np.random.seed(1)
 synaptic_weights = 2 * np.random.random((3,1)) - 1 
 print(f'random staring weights\n{synaptic_weights}')
 
-for itter in range(20000):
+for itter in range(69000):
 
     input_layer = training_inputs
 
